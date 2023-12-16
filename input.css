@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+	@apply outline-none;
+	/* @apply outline outline-2 outline-green-400; */
+}
+
+body {
+	@apply bg-arsenic-800;
+}
+
+html {
+	scrollbar-gutter: unset;
+}
+
+* {
+	-webkit-tap-highlight-color: transparent;
+}
+
+.call :has(.x, .o) {
+	@apply fill-none stroke-none;
+}
+
+.call:hover .x {
+	@apply fill-none stroke-x stroke-[35px];
+}
+.call:hover .o {
+	@apply fill-none stroke-o stroke-[35px];
+}
+.scale-down::after {
+	@apply !scale-50;
+}
+.scale-down + div {
+	@apply pointer-events-none scale-95 opacity-0;
+}
